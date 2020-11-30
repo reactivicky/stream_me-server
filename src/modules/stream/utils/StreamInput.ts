@@ -11,3 +11,15 @@ export class StreamInput {
   @Field()
   url: string
 }
+
+@InputType()
+export class EditStreamInput {
+  @Field({ nullable: true })
+  title?: string
+
+  @Field({ nullable: true })
+  description?: string
+
+  @Field({ nullable: true })
+  url?: string
+}

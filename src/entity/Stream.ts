@@ -19,8 +19,8 @@ export class Stream extends BaseEntity {
   @Column()
   title: string
 
-  @Field()
-  @Column()
+  @Field({ nullable: true })
+  @Column({ nullable: true })
   description: string
 
   @Field()
