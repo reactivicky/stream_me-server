@@ -1,4 +1,5 @@
 import "reflect-metadata"
+import "dotenv"
 import { ApolloServer } from "apollo-server-express"
 import Express from "express"
 import { createConnection } from "typeorm"
@@ -25,6 +26,7 @@ const main = async () => {
       StreamResolver,
     ],
     authChecker: ({ context: { req } }) => !!req.session.userId,
+    emitSchemaFile: true,
   })
 
   const apolloServer = new ApolloServer({
